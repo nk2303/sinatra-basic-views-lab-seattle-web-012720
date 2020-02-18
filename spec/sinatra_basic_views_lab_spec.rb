@@ -11,11 +11,9 @@ describe 'App' do
       expect(last_response.status).to eq(200)
     end
 
-
     it "renders index.erb" do
       expect(last_response.body).to eq(File.read("views/index.erb"))
     end
-
 
     it "displays the name of the bowling alley in an h1 tag" do
       expect(last_response.body).to include("<h1>Buster's Best Bowling Alley</h1>")
